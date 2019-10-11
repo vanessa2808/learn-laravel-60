@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImageToBlogTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddImageToBlogTable extends Migration
      */
     public function up()
     {
-        Schema::table('blog', function (Blueprint $table) {
-            $table->string('image');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddImageToBlogTable extends Migration
      */
     public function down()
     {
-        Schema::table('blog', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('categories');
     }
 }

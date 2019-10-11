@@ -35,7 +35,9 @@ Route::get('/admin/blog/add_blog', 'BlogController@get_addBlog')->name('get_addB
 Route::post('/admin/blog/edit_blog/{id}', 'BlogController@post_editBlog')->name('post_editBlog');
 Route::get('/admin/blog/edit_blog/{id}', 'BlogController@get_editBlog')->name('get_editBlog');
 Route::get('/admin/blog/delete_blog/{id}','BlogController@delete_blog')->name('delete_blog');
-
+Route::post('/admin/categories/add_categories', 'categoriesController@post_addcategories')->name('post_addcategories');
+Route::get('/admin/categories/add_categories', 'categoriesController@get_addcategories')->name('get_addcategories');
+Route::get('/admin/categories/list_categories','categoriesController@list_categories')->name('list_categories');
 Route::get('/admin/blog/list_blog','BlogController@list_blog')->name('list_blog');
 Route::get('/admin/mailbox/mailbox','mailController@list_mail')->name('list_mail');
 Route::get('ckeditor', 'CkeditorController@index');

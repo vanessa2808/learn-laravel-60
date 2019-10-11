@@ -335,8 +335,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="admin/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Add category</a></li>
-            <li><a href="admin/pages/charts/morris.html"><i class="fa fa-circle-o"></i> List category</a></li>
+            <li><a href="admin/categories/add_categories"><i class="fa fa-circle-o"></i> Add category</a></li>
+            <li><a href="admin/categories/list_categories"><i class="fa fa-circle-o"></i> List category</a></li>
             
           </ul>
         </li>

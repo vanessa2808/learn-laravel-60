@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAuthorToBlogTable extends Migration
+class AddNameToCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddAuthorToBlogTable extends Migration
      */
     public function up()
     {
-        Schema::table('blog', function (Blueprint $table) {
-            $table->string('author');
+        Schema::table('categories', function (Blueprint $table) {
+            $table->string('name');
         });
     }
 
@@ -25,7 +25,7 @@ class AddAuthorToBlogTable extends Migration
      */
     public function down()
     {
-        Schema::table('blog', function (Blueprint $table) {
+        Schema::table('categories', function (Blueprint $table) {
             //
         });
     }

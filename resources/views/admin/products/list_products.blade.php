@@ -15,7 +15,12 @@
             <div class="box-body">
               <table class="table table-bordered">
                 <tr>
+                  <a class="btn btn-primary" href="/admin/products/add_products">Add products +</a>
+                  <br/>
+                  <br/>
+                  <br/>
     <th style="width: 10px">#</th>
+    <th style="width: 10px">user_id</th>
     <th>ProductName</th>
     <th>Image</th>
     <th>Price</th>
@@ -29,7 +34,7 @@
               <tr>
                 <td>{{$products->id}}</td>
                 <td>{{$products->name}}</td>
-                <td><img src="admin/uploads/products/{{$products->image}}" height="100px"></td>
+                <td><img src="admin/uploads/products/{{$products->image}}" width="100px"></td>
                 <td>{{$products->price}}</td>
                 <td>{{$products->description}}</td>
                 <td>
