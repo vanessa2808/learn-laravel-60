@@ -4,8 +4,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-class ProductController extends Controller {
-    
+use Illuminate\Support\Facades\Auth;
+
+class ProductController extends Controller {  
+   public function __construct()
+    {
+         $this->middleware('auth'); 
+         //$this->middleware('auth', ['except' => array('get_edit')]);   
+    }
     public function get_add(){
       return view('admin.products.add_products');
     }

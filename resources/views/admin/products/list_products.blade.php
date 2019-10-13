@@ -20,7 +20,7 @@
                   <br/>
                   <br/>
     <th style="width: 10px">#</th>
-    <th style="width: 10px">user_id</th>
+    <th style="width: 10px">username</th>
     <th>ProductName</th>
     <th>Image</th>
     <th>Price</th>
@@ -33,6 +33,7 @@
             @foreach ($products as $products)
               <tr>
                 <td>{{$products->id}}</td>
+                <td>{{ Auth::user()->name }}</td>
                 <td>{{$products->name}}</td>
                 <td><img src="admin/uploads/products/{{$products->image}}" width="100px"></td>
                 <td>{{$products->price}}</td>

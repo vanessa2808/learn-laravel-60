@@ -20,7 +20,7 @@
     <th style="width: 10px">#</th>
     <th>Username</th>
     <th>email</th>
-     <th>password</th>
+    
     <th>Avatar</th>
     <th>Action</th>
   </tr>
@@ -30,8 +30,7 @@
                 <td>{{$users->id}}</td>
                 <td>{{$users->name}}</td>
                 <td>{{$users->email}}</td>
-                <td>{{$users->password}}</td>
-                      <td><img src="admin/uploads/users/{{$users->avatar}}"  width="100px"></td>
+                <td><img src="admin/uploads/users/{{$users->avatar}}"  width="100px"></td>
                 <td>
                   <a href="/admin/users/edit_users/{{$users->id}}" class="btn btn-primary">Edit</a>
                   

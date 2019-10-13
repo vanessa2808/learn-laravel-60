@@ -3,16 +3,22 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+     public function __construct()
+    {
+         $this->middleware('auth'); 
+         //$this->middleware('auth', ['except' => array('get_edit')]);   
+    }
 public function get_addUsers() {
         return view('admin.users.add_users');
     }
     public function post_addUSers(Request $request) {
         $name = $request->name;
         $email = $request->email;
-        $password = $request->password;
+        $password =  Hash::make($request->password);
         $created_at = date('Y-m-d h:i:s');
         $avatar = 'default.png';
         if ($request->hasfile('avatar')){
